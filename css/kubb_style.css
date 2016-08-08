@@ -16,7 +16,7 @@ header {
 	background-color: rgba(140,140,140,0.3);
 	z-index: 1;
 }
-menu {
+.menu {
 	width: 1170px;
 	height: 30px;
 	margin: 0 auto;
@@ -27,40 +27,36 @@ hgroup {
 	float: left;
 	line-height: 30px;
 }
-menu hgroup a {
-	color: rgb(0,0,0);
-	text-decoration: none;
-}
 h1 {
 	display: none;
 }
-menu ul {
-	width: 555px;
+.menu ul {
+	min-width: 555px;
 	list-style: none;
 	font-family: Impact;
 	font-weight: bold;
 	font-size: 14px;
 	float: right;	
 }
-menu li {
+.menu li {
 	float: left;
 	padding: 0px 22px;
 	height: 30px;
 	display: table;
 }
-menu ul a {
+.menu ul a {
 	text-decoration: none;
 	color: rgb(245,245,245);
 	display: table-cell;
 	vertical-align: middle;
 }
-menu li {
+.menu li {
 	color: rgb(40,184,216);
 }
-menu ul a:hover {
+.menu ul a:hover {
 	color: rgb(40,184,216);
 }
-menu ul a:active {
+.menu ul a:active {
 	color: rgb(40,184,216);
 }
 .social {
@@ -242,7 +238,7 @@ menu ul a:active {
 	font-size: 14px;	
 }
 #about {
-	height: 703px;
+	min-height: 703px;
 	background-color: rgb(249,249,249);
 	border-top: 1px solid rgb(249,249,249);
 }
@@ -259,13 +255,14 @@ menu ul a:active {
 	color: rgb(102,102,102);
 }
 .about-ul {
-	height: 355px;
-	margin: 25px auto;
+	min-height: 355px;
+	margin: 0 auto;
+	padding: 25px 0 25px 0; 
 	display: table;
 	list-style: none;
 }
 .about-content-block {
-	height: 353px;
+	min-height: 353px;
 	width: 368px;
 	background-color: rgb(255,255,255);
 	border: 1px solid rgb(227,227,227);
@@ -317,8 +314,8 @@ h3 {
     text-align: center;
     white-space: nowrap;
   }
-h3:before,
-h3:after {
+.line:before,
+.line:after {
     content: '';
     position: relative;
     display: inline-block;
@@ -372,7 +369,7 @@ h3:after {
 }
 .insta-btn {
 	display: block;
-	height: 46px;
+	min-height: 46px;
 	width: 177px;
 	margin: 40px auto;
 	font-size: 14px;
@@ -390,7 +387,7 @@ h3:after {
 	text-align: center;
 }
 #services-and-jornal {
-	height: 1068px;
+	padding-bottom: 60px;
 	background-color: rgb(249,249,249);
 	border-top: 1px solid rgb(249,249,249);
 }
@@ -398,18 +395,18 @@ h3:after {
 	margin-top: 75px;
 }
 .journal-conteiner {
-	height: 461px;
+	min-height: 461px;
 	margin-top: 20px;
 }
 .journal-conteiner ul {
-	height: 461px;
 	margin: 0px auto;
 	display: table;
 	list-style: none;
 }
 .journal-conteiner ul li {
-	height: 459px;
+	
 	width: 368px;
+	padding-bottom: 40px;
 	background-color: rgb(255,255,255);
 	border: 1px solid rgb(227,227,227);
 	margin-right: 30px;
@@ -476,17 +473,15 @@ h3:after {
  	cursor: pointer;
  }
 #services-conteiner {
-	height: 330px;
+	min-height: 330px;
 	width: 1170px;
 	margin: 0 auto;
 	padding-top: 75px;
 }
 #little-about-me-block {
-	height: 330px;
+	min-height: 330px;
 	width: 570px;
-	float: left;
-	overflow: hidden;
-
+	display: inline-block;
 }
 #little-about-me-block img {
 	background-color: rgb(217,217,217);
@@ -504,29 +499,35 @@ h3:after {
 #little-about-me-block span p {
 	font-size: 18px;
 }
+.r-line-block {
+	display: block;	
+}
 #little-about-me-block h3 {
-	margin-top: 0;
-	position: relative;
-	right: 200px;
-  font-family: Raavi;
+	margin: 0 0 0 0;
+	display: inline-block;
+	font-family: Raavi;
   font-weight: bold;
   font-size: 18px;
   color: rgb(68,68,68);
   text-align: center;
   white-space: nowrap;
+	position: relative;
 }
-#little-about-me-block h3:before,
-#little-about-me-block h3:after {
-    content: '';
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    width: 	100px;
-    height: 2px;
-    top: -1px;
-    border-bottom: 1px solid rgb(83,83,83);
-    border-top: 1px solid rgb(83,83,83);
-    margin-top: 0px;
+.r-line::before {
+	content: '';
+	display: inline-block;
+	width: 	0px;
+} 
+.r-line::after {
+  content: '';
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	height: 2px;
+	width: 	100px;
+	top: -1px;
+  border-bottom: 1px solid rgb(83,83,83);
+  border-top: 1px solid rgb(83,83,83);
   }
 #my-services-block {
 	height: 330px;
@@ -536,8 +537,7 @@ h3:after {
 }
 #my-services-block h3 {
 	margin-top: 0;
-	right: 225px;
-	position: relative;
+	display: inline-block;
 	margin-bottom: 11px;
 	font-family: Raavi;
   font-weight: bold;
@@ -566,18 +566,19 @@ h3:after {
 	vertical-align: top;
 }
 #contact {
-	height: 379px;
+	min-height: 379px;
 	background-color: rgb(55,55,55);
 	border-top: 1px solid rgb(55,55,55);
 }
 #contact ul {
 	display: table;
-	height: 260px;
-	margin: 60px auto 0 auto;
+	min-height: 260px;
+	margin: 60px auto 0px auto;
 	list-style:none;
 }
 #contact ul li {
-	height: 260px;
+	min-height: 260px;
+	margin: 0 0 60px 0;
 	width: 270px;
 	float: left;
 	margin-right: 20px;
